@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="Organizacija">
+  <customUserInfoDefinitions>
+    <customUserInfoDefinition>
+      <name>clanVlade</name>
+      <description></description>
+    </customUserInfoDefinition>
+  </customUserInfoDefinitions>
+  <users>
+    <user userName="Siri">
+      <firstName>Dusan</firstName>
+      <lastName>Janosevic</lastName>
+      <personalData/>
+      <professionalData>
+        <email>dusan.janosevic123@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>clanVlade</name>
+          <value>false</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="Robovlasnik">
+      <firstName>Sara</firstName>
+      <lastName>Sinjeri</lastName>
+      <personalData/>
+      <professionalData>
+        <email>Sara@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>clanVlade</name>
+          <value>false</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="Vana">
+      <firstName>Ana</firstName>
+      <lastName>Vulin</lastName>
+      <personalData/>
+      <professionalData>
+        <email>Vana@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>clanVlade</name>
+          <value>false</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="Rob">
+      <firstName>Srdjan</firstName>
+      <lastName>Stjepanovic</lastName>
+      <manager>Robovlasnik</manager>
+      <personalData/>
+      <professionalData>
+        <email>Srki@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>clanVlade</name>
+          <value>false</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="Goca">
+      <firstName>Gordana</firstName>
+      <lastName>Sinjeri</lastName>
+      <manager>Robovlasnik</manager>
+      <personalData/>
+      <professionalData>
+        <email>Goca@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>clanVlade</name>
+          <value>false</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="zaposleniUSektoruZaRegistraciju1">
+      <firstName>Mihajlo</firstName>
+      <lastName>Savic</lastName>
+      <manager>Siri</manager>
+      <personalData/>
+      <professionalData>
+        <email>Mixa@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>clanVlade</name>
+          <value>false</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="zaposleniUSektoruZaRegistraciju2">
+      <firstName>Kristian</firstName>
+      <lastName>Krizan</lastName>
+      <manager>Siri</manager>
+      <personalData/>
+      <professionalData>
+        <email>krizan@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>clanVlade</name>
+          <value>false</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="zaposleniUVladi">
+      <firstName>Veljko</firstName>
+      <lastName>Vulin</lastName>
+      <title></title>
+      <jobTitle></jobTitle>
+      <manager>Vana</manager>
+      <personalData/>
+      <professionalData>
+        <email>MaminSin@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>clanVlade</name>
+          <value>true</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="Bekendas">
+      <firstName>Sandra</firstName>
+      <lastName>Brkic</lastName>
+      <manager>Vana</manager>
+      <personalData/>
+      <professionalData>
+        <email>bekendas@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>clanVlade</name>
+          <value>true</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="Zaric">
+      <firstName>Miroslav</firstName>
+      <lastName>Zaric</lastName>
+      <manager></manager>
+      <personalData>
+        <email>Zaric@gmail.com</email>
+      </personalData>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>clanVlade</name>
+          <value>false</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="anonymous">
+      <manager>Vana</manager>
+      <personalData/>
+      <professionalData>
+        <email>anonymous@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>clanVlade</name>
+          <value>false</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+  </users>
+  <roles>
+    <role name="Clan">
+      <displayName>Clan</displayName>
+    </role>
+    <role name="Sef">
+      <displayName>Sef</displayName>
+    </role>
+    <role name="Anonymous">
+      <displayName>Anonymous</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="Vlada">
+      <displayName>Vlada</displayName>
+    </group>
+    <group name="Agencija">
+      <displayName>Agencija</displayName>
+    </group>
+    <group name="SektorZaRegistraciju" parentPath="/Agencija">
+      <displayName>SektorZaRegistraciju</displayName>
+    </group>
+    <group name="SektorZaKodifikaciju" parentPath="/Agencija">
+      <displayName>SektorZaKodifikaciju</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>Siri</userName>
+      <roleName>Sef</roleName>
+      <groupName>SektorZaRegistraciju</groupName>
+      <groupParentPath>/Agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>Robovlasnik</userName>
+      <roleName>Sef</roleName>
+      <groupName>SektorZaKodifikaciju</groupName>
+      <groupParentPath>/Agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>Vana</userName>
+      <roleName>Sef</roleName>
+      <groupName>Vlada</groupName>
+    </membership>
+    <membership>
+      <userName>Rob</userName>
+      <roleName>Clan</roleName>
+      <groupName>SektorZaKodifikaciju</groupName>
+      <groupParentPath>/Agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>Goca</userName>
+      <roleName>Clan</roleName>
+      <groupName>SektorZaKodifikaciju</groupName>
+      <groupParentPath>/Agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>zaposleniUSektoruZaRegistraciju1</userName>
+      <roleName>Clan</roleName>
+      <groupName>SektorZaRegistraciju</groupName>
+      <groupParentPath>/Agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>zaposleniUSektoruZaRegistraciju2</userName>
+      <roleName>Clan</roleName>
+      <groupName>SektorZaRegistraciju</groupName>
+      <groupParentPath>/Agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>zaposleniUVladi</userName>
+      <roleName>Clan</roleName>
+      <groupName>Vlada</groupName>
+    </membership>
+    <membership>
+      <userName>Bekendas</userName>
+      <roleName>Clan</roleName>
+      <groupName>Vlada</groupName>
+    </membership>
+    <membership>
+      <userName>anonymous</userName>
+      <roleName>Anonymous</roleName>
+      <groupName>Vlada</groupName>
+    </membership>
+  </memberships>
+</organization:Organization>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.14.0">
+    <businessObjects>
+        <businessObject qualifiedName="paket.RaskidanjeUgovora.RaskidUgovora">
+            <fields>
+                <field type="STRING" length="255" name="izvestajAgencije" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="izvestajVlade" nullable="false" collection="false"/>
+                <field type="LOCALDATE" length="255" name="datumIniciranja" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="realizovan" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="refundiraniTroskovi" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="paket.RegistracijaNovihKlijenata.Ugovor" fetchType="LAZY" name="ugovor" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="paket.kodifikacijaZakona.ZahtevZaKodifikaciju" fetchType="LAZY" name="zahtevZaKodifikaciju" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="odobrenjeNastavkaProcesaNadredjenogVlade" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="odobrenjeNastavkaProcesaNadredjenogAgencije" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="paket.RegistracijaNovihKlijenata.NivoUprave">
+            <fields>
+                <field type="STRING" length="255" name="nivoUprave" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="paket.RegistracijaNovihKlijenata.PersonalizovanaPonuda">
+            <fields>
+                <relationField type="COMPOSITION" reference="paket.RegistracijaNovihKlijenata.StavkaPonude" fetchType="LAZY" name="stavkePonude" nullable="true" collection="true"/>
+                <field type="BOOLEAN" length="255" name="vladiNeOdgovaraPonuda" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="paket.RegistracijaNovihKlijenata.StatusUgovora">
+            <fields>
+                <field type="STRING" length="255" name="status" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="paket.RegistracijaNovihKlijenata.StatusZahtevaZaRegistraciju">
+            <fields>
+                <field type="STRING" length="255" name="status" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="paket.RegistracijaNovihKlijenata.StavkaPonude">
+            <fields>
+                <field type="STRING" length="255" name="naziv" nullable="false" collection="false"/>
+                <field type="DOUBLE" length="255" name="mesecnaCena" nullable="false" collection="false"/>
+                <field type="DOUBLE" length="255" name="godisnjaCena" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="kupljena" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="paket.RegistracijaNovihKlijenata.StavkaUgovora">
+            <fields>
+                <field type="DOUBLE" length="255" name="godisnjaCena" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="naziv" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="paket.RegistracijaNovihKlijenata.Ugovor">
+            <fields>
+                <field type="DOUBLE" length="255" name="ukupnaCena" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="komentari" nullable="true" collection="true"/>
+                <field type="BOOLEAN" length="255" name="odobren" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="potpisPredsednikaVlade" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="potpisSefaOdeljenja" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="datumPotpisivanja" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="placeno" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="paket.RegistracijaNovihKlijenata.StavkaUgovora" fetchType="EAGER" name="stavkeUgovora" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="attribute" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="pdf" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="paket.RegistracijaNovihKlijenata.ZahtevZaRegistraciju">
+            <fields>
+                <field type="STRING" length="64" name="nazivUprave" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="paket.RegistracijaNovihKlijenata.NivoUprave" fetchType="LAZY" name="nivoUprave" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="mesto" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="postanskiBroj" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="brojLjudiKojiKoristeSoftver" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="paket.RegistracijaNovihKlijenata.StatusZahtevaZaRegistraciju" fetchType="EAGER" name="status" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="paket.RegistracijaNovihKlijenata.PersonalizovanaPonuda" fetchType="LAZY" name="personalizovanaPonuda" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="pregledZakonaPreObjavljivanja" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="paket.RegistracijaNovihKlijenata.Ugovor" fetchType="LAZY" name="ugovor" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="paket.kodifikacijaZakona.Pitanje">
+            <fields>
+                <field type="STRING" length="255" name="sadrzaj" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="odgovor" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="paket.kodifikacijaZakona.Primedba">
+            <fields>
+                <field type="STRING" length="255" name="sadrzaj" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="odgovor" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="paket.kodifikacijaZakona.StatusZahtevaZaKodifikaciju">
+            <fields>
+                <field type="STRING" length="255" name="status" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="paket.kodifikacijaZakona.StavkaZahtevaZaKodifikaciju">
+            <fields>
+                <field type="STRING" length="255" name="dokumentZakona" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="instrukcijeZaKodifikaciju" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="skeniranPotpisanZakon" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="paket.kodifikacijaZakona.Pitanje" fetchType="EAGER" name="pitanja" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="paket.kodifikacijaZakona.Primedba" fetchType="EAGER" name="primedbe" nullable="true" collection="true"/>
+                <field type="BOOLEAN" length="255" name="odobrenOdStraneAdvokataZaReviziju" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="odobrenOdStraneVlade" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="zatrazeneIzmene" nullable="true" collection="true"/>
+                <field type="BOOLEAN" length="255" name="potrebnaPojasnjenja" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="zatrazeneIzmeneOdStraneAdvokataZaReviziju" nullable="true" collection="true"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="paket.kodifikacijaZakona.ZahtevZaKodifikaciju">
+            <fields>
+                <relationField type="COMPOSITION" reference="paket.kodifikacijaZakona.StavkaZahtevaZaKodifikaciju" fetchType="EAGER" name="stavke" nullable="true" collection="true"/>
+                <relationField type="AGGREGATION" reference="paket.kodifikacijaZakona.StatusZahtevaZaKodifikaciju" fetchType="EAGER" name="status" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="preostaloVremeZaIzvrsavanje" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="datumIniciranja" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="pregledOdStraneVlade" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="ponovniPregledVlade" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="ponovniPregledAdvokata" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>
